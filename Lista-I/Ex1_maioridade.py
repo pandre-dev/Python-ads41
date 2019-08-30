@@ -13,11 +13,13 @@ class Pessoa:
     def __init__(self, idade):
         self.idade = idade
     
-    def maioridade(self):
-        if self.idade >= 18:
-            print("Maior de 18 anos.")
-        else:
-            print("Menos de 18 anos.")
+    def checarMaioridade(self):
+        return self.idade >= 18
+           
 
-nova_pessoa = Pessoa(int(input("Digite a idade: ")))
-nova_pessoa.maioridade()
+if __name__ == "__main__":
+    nova_pessoa = Pessoa(int(input("Digite a idade: ")))
+    if (nova_pessoa.checarMaioridade() == True):
+        print("Maior de 18 anos.")
+    else:
+        print("Menos de 18 anos.")
