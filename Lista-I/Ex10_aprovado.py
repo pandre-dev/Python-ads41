@@ -5,11 +5,10 @@
 def aprovacao(n1, n2, n3):
     media = (n1+n2+n3)/3
     if media >= 7:
-        print("\nAluno aprovado!")
-    else:
-        print("\nAluno rerovado!")
-    print(f"Média: {media}")
+        return True
+    return False
 
-aprovacao(float(input("Digite a primeira nota: ")),
-          float(input("Digite a segunda nota: ")),
-          float(input("Digite a terceira nota: ")))
+if __name__ == "__main__":
+    aprovacao(float(input("Digite a primeira nota: ")),
+            float(input("Digite a segunda nota: ")),
+            float(input("Digite a terceira nota: ")))
